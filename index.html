@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorach Records - Estudio de Grabación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #57a639;
+            --primary-violet: #613d97;
+            --accent-green: #aed078;
+            --accent-violet: #512f87;
+            --dark-bg: #0a0f0a;
+            --card-bg: rgba(16, 185, 129, 0.1);
+        }
+        
+        .green-violet-gradient {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-violet) 100%);
+        }
+        
+        .violet-green-gradient {
+            background: linear-gradient(135deg, var(--primary-violet) 0%, var(--primary-green) 100%);
+        }
+        
+        .dorach-text-gradient {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-violet) 50%, var(--accent-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-card {
+            background: rgba(16, 185, 129, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        }
+        
+        .violet-glow {
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+        }
+        
+        .green-glow {
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0f0a 0%, #0f0a0f 100%);
+            color: #ffffff;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-green);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-violet) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-card">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 green-violet-gradient rounded-full flex items-center justify-center">
+                        <i class="fas fa-music text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold dorach-text-gradient">DORACH RECORDS</h1>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Audio Excellence</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link text-sm font-medium">Inicio</a>
+                    <a href="#servicios" class="nav-link text-sm font-medium">Servicios</a>
+                    <a href="#nosotros" class="nav-link text-sm font-medium">Nosotros</a>
+                    <a href="#testimonios" class="nav-link text-sm font-medium">Testimonios</a>
+                    <a href="#contacto" class="nav-link text-sm font-medium">Contacto</a>
+                </div>
+                
+                <button class="btn-primary px-6 py-2 rounded-full text-white font-semibold">
+                    Reservar Ahora
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-900/20 via-transparent to-violet-900/20"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-float mb-8">
+                <span class="inline-flex items-center space-x-2 px-4 py-2 glass-card rounded-full text-sm font-bold text-green-400">
+                    <i class="fas fa-microphone"></i>
+                    <span>El sonido de tu futuro comienza aquí</span>
+                </span>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+                Donde tus sueños se convierten en 
+                <span class="dorach-text-gradient text-glow">Sonido</span>
+            </h1>
+            
+            <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Estudio de grabación profesional, academia de música y agencia de servicios artísticos dedicada a elevar el estándar de la producción musical.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <button class="btn-primary px-8 py-4 rounded-full text-lg font-bold flex items-center space-x-2">
+                    <span>Ver Servicios</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="glass-card px-8 py-4 rounded-full text-lg font-bold flex items-center space-x-2 hover:bg-violet-500/20">
+                    <i class="fas fa-play"></i>
+                    <span>Escuchar Demo</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Animated Elements -->
+        <div class="absolute bottom-0 left-0 w-full h-24 overflow-hidden opacity-30">
+            <div class="flex items-end justify-center space-x-1 h-full">
+                <div class="w-1 bg-green-500 rounded-t-full animate-pulse" style="height: 30px; animation-delay: 0s;"></div>
+                <div class="w-1 bg-violet-500 rounded-t-full animate-pulse" style="height: 50px; animation-delay: 0.1s;"></div>
+                <div class="w-1 bg-green-400 rounded-t-full animate-pulse" style="height: 40px; animation-delay: 0.2s;"></div>
+                <div class="w-1 bg-violet-400 rounded-t-full animate-pulse" style="height: 60px; animation-delay: 0.3s;"></div>
+                <div class="w-1 bg-green-500 rounded-t-full animate-pulse" style="height: 35px; animation-delay: 0.4s;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black mb-4">
+                    Nuestros <span class="dorach-text-gradient">Servicios</span>
+                </h2>
+                <div class="w-24 h-1 green-violet-gradient mx-auto mb-6"></div>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Ofrecemos una gama completa de soluciones musicales diseñadas para llevar tu talento al siguiente nivel profesional.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card glass-card p-8 rounded-2xl">
+                    <div class="text-green-400 text-4xl mb-6">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Clases de Música</h3>
+                    <p class="text-gray-300 mb-6">Formación integral para músicos de todos los niveles con instructores certificados.</p>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Canto y técnica vocal</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Piano y teclados</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Guitarra acústica y eléctrica</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Teoría musical y solfeo</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card glass-card p-8 rounded-2xl">
+                    <div class="text-violet-400 text-4xl mb-6">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Producción Musical</h3>
+                    <p class="text-gray-300 mb-6">Transformamos tu idea creativa en una obra maestra sonora con tecnología de punta.</p>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Grabación de alta fidelidad</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Mezcla profesional (Mixing)</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Masterización digital</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Diseño sonoro</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card glass-card p-8 rounded-2xl">
+                    <div class="text-green-400 text-4xl mb-6">
+                        <i class="fas fa-file-audio"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Arreglos y Orquestación</h3>
+                    <p class="text-gray-300 mb-6">Enriquecemos tus canciones con arreglos personalizados para cualquier género.</p>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Arreglos para cuerdas y vientos</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Adaptaciones de género</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Transcripción de partituras</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Dirección musical</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card glass-card p-8 rounded-2xl">
+                    <div class="text-violet-400 text-4xl mb-6">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Asesoría para Artistas</h3>
+                    <p class="text-gray-300 mb-6">Orientación estratégica para impulsar tu carrera en la industria musical actual.</p>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Branding e imagen artística</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Distribución digital</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Gestión de derechos</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Marketing para lanzamientos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-24 px-6 bg-gradient-to-r from-green-900/10 to-violet-900/10">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h4 class="text-green-400 font-bold uppercase tracking-wider text-sm mb-4">Sobre Dorach Records</h4>
+                    <h2 class="text-5xl font-black mb-6 leading-tight">
+                        La excelencia <span class="dorach-text-gradient">sonora</span> como estandarte
+                    </h2>
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                        Dorach Records nació de la pasión por la excelencia sonora. Fundado por músicos para músicos, nuestro estudio combina tecnología de vanguardia con un ambiente creativo inspirador.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 mb-10">
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 flex items-center">
+                                <span class="w-8 h-1 bg-green-400 mr-3"></span> Misión
+                            </h3>
+                            <p class="text-gray-400">Empoderar a los artistas a través de servicios de producción y formación de clase mundial.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 flex items-center">
+                                <span class="w-8 h-1 bg-violet-400 mr-3"></span> Visión
+                            </h3>
+                            <p class="text-gray-400">Ser el referente latinoamericano en innovación musical y desarrollo de talento artístico.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="glass-card p-4 rounded-xl text-center">
+                            <div class="text-green-400 text-2xl mb-2"><i class="fas fa-award"></i></div>
+                            <div class="text-2xl font-black dorach-text-gradient">8+</div>
+                            <div class="text-xs text-gray-400 uppercase">Años</div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl text-center">
+                            <div class="text-violet-400 text-2xl mb-2"><i class="fas fa-users"></i></div>
+                            <div class="text-2xl font-black dorach-text-gradient">500+</div>
+                            <div class="text-xs text-gray-400 uppercase">Artistas</div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl text-center">
+                            <div class="text-green-400 text-2xl mb-2"><i class="fas fa-microphone"></i></div>
+                            <div class="text-2xl font-black dorach-text-gradient">200+</div>
+                            <div class="text-xs text-gray-400 uppercase">Producciones</div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl text-center">
+                            <div class="text-violet-400 text-2xl mb-2"><i class="fas fa-trophy"></i></div>
+                            <div class="text-2xl font-black dorach-text-gradient">12</div>
+                            <div class="text-xs text-gray-400 uppercase">Premios</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="glass-card p-8 rounded-2xl">
+                        <img src="./public/images/dorach_records_green_violet_landing_20260125_185234.jpeg" alt="Dorach Records Studio" class="w-full h-64 object-cover rounded-xl mb-6">
+                        <h3 class="text-2xl font-bold mb-4 dorach-text-gradient">Nuestro Estudio</h3>
+                        <p class="text-gray-300">Equipado con la última tecnología en grabación y producción musical, nuestro estudio ofrece un ambiente profesional y creativo para dar vida a tus ideas musicales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-24 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">
+                    Lo que dicen <span class="dorach-text-gradient">nuestros artistas</span>
+                </h2>
+                <p class="text-gray-300 text-lg">La confianza de nuestros clientes es el mejor reflejo de nuestro compromiso con la excelencia musical.</p>
+            </div>
+            
+            <div class="glass-card p-12 rounded-2xl text-center">
+                <div class="text-6xl text-green-400 mb-6 opacity-50">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="text-2xl italic mb-8 leading-relaxed">
+                    "La calidad de producción en Dorach Records superó mis expectativas. Mi último EP suena increíble gracias a su atención al detalle."
+                </p>
+                <div class="flex items-center justify-center">
+                    <div class="w-16 h-16 green-violet-gradient rounded-full flex items-center justify-center text-2xl font-bold mr-4">
+                        CM
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Carlos Méndez</h4>
+                        <p class="text-green-400 text-sm uppercase tracking-wider">Cantautor Independiente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 px-6 bg-gradient-to-r from-violet-900/10 to-green-900/10">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">
+                    ¿Listo para <span class="dorach-text-gradient">crear algo increíble?</span>
+                </h2>
+                <p class="text-gray-300 text-lg">Contáctanos para agendar una sesión en el estudio, una clase de prueba o asesoría personalizada.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="glass-card p-8 rounded-2xl">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Nombre Completo</label>
+                                <input type="text" class="w-full px-4 py-3 bg-black/50 border border-green-500/30 rounded-lg focus:border-green-400 focus:outline-none" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Correo Electrónico</label>
+                                <input type="email" class="w-full px-4 py-3 bg-black/50 border border-violet-500/30 rounded-lg focus:border-violet-400 focus:outline-none" placeholder="tu@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Asunto</label>
+                            <input type="text" class="w-full px-4 py-3 bg-black/50 border border-green-500/30 rounded-lg focus:border-green-400 focus:outline-none" placeholder="¿En qué podemos ayudarte?">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Mensaje</label>
+                            <textarea rows="5" class="w-full px-4 py-3 bg-black/50 border border-violet-500/30 rounded-lg focus:border-violet-400 focus:outline-none" placeholder="Cuéntanos más sobre tu proyecto..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-primary py-4 rounded-lg font-bold text-lg">
+                            Enviar Mensaje <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="glass-card p-6 rounded-xl flex items-center space-x-4">
+                        <div class="w-12 h-12 green-violet-gradient rounded-lg flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Dirección</h4>
+                            <p class="text-gray-300">Cra 36b # 14-38, Cali-Colombia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-xl flex items-center space-x-4">
+                        <div class="w-12 h-12 violet-green-gradient rounded-lg flex items-center justify-center">
+                            <i class="fas fa-phone text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Teléfono & WhatsApp</h4>
+                            <p class="text-gray-300">+57 300 888 4574</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-xl flex items-center space-x-4">
+                        <div class="w-12 h-12 green-violet-gradient rounded-lg flex items-center justify-center">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Email</h4>
+                            <p class="text-gray-300">dorachrecords@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-xl flex items-center space-x-4">
+                        <div class="w-12 h-12 violet-green-gradient rounded-lg flex items-center justify-center">
+                            <i class="fas fa-clock text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Horarios</h4>
+                            <p class="text-gray-300">Lunes a Sábado: 9:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <h4 class="font-bold mb-4">Síguenos en redes</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-green-500/20 transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-violet-500/20 transition-all">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-green-500/20 transition-all">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-violet-500/20 transition-all">
+                                <i class="fab fa-spotify"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 border-t border-green-500/20">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 green-violet-gradient rounded-lg flex items-center justify-center">
+                            <i class="fas fa-music text-white"></i>
+                        </div>
+                        <span class="text-2xl font-black dorach-text-gradient">DORACH RECORDS</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Estudio de grabación, academia de música y agencia de servicios artísticos líder en la región.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-green-400 hover:text-green-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-violet-400 hover:text-violet-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-green-400 hover:text-green-300"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-violet-400 hover:text-violet-300"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Navegación</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-green-400">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-green-400">Servicios</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-green-400">Nosotros</a></li>
+                        <li><a href="#testimonios" class="text-gray-400 hover:text-green-400">Testimonios</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-green-400">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Servicios</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-violet-400">Clases de Música</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-violet-400">Producción Musical</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-violet-400">Arreglos y Orquestación</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-violet-400">Asesoría para Artistas</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contacto</h4>
+                    <div class="space-y-4 text-sm">
+                        <p class="text-gray-400">
+                            <span class="text-green-400 font-bold">Dir:</span><br>
+                            Cra 36b # 14-38, Cali-Colombia
+                        </p>
+                        <p class="text-gray-400">
+                            <span class="text-violet-400 font-bold">Tel:</span> +57 300 888 4574
+                        </p>
+                        <p class="text-gray-400">
+                            <span class="text-green-400 font-bold">Email:</span> dorachrecords@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-violet-500/20 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2026 Dorach Records. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-green-400">Política de Privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-violet-400">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(16, 185, 129, 0.15)';
+                header.style.backdropFilter = 'blur(15px)';
+            } else {
+                header.style.background = 'rgba(16, 185, 129, 0.1)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.');
+        });
+    </script>
+</body>
+</html>
