@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dorach Records | Producción Musical</title>
+<title>Dorach Records</title>
 
-<meta name="description" content="Producción musical, identidad artística y desarrollo de proyectos sonoros independientes.">
-<meta name="author" content="Dorach Records">
+<meta name="description" content="Producción musical, desarrollo artístico y creación sonora independiente.">
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="icon" href="favicon.png">
+<link rel="icon" href="images/logo.png">
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 </head>
 
+
 <body>
 
 <header class="header">
 
-<div class="container nav">
+<div class="nav container">
 
 <div class="logo">
 
 <img src="images/logo.png">
-
 <span>Dorach Records</span>
 
 </div>
@@ -35,10 +35,10 @@
 <nav>
 
 <a href="#inicio">Inicio</a>
-<a href="#nosotros">Nosotros</a>
 <a href="#servicios">Servicios</a>
-<a href="#proyectos">Proyectos</a>
+<a href="#proyectos">Producciones</a>
 <a href="#biblioteca">Biblioteca</a>
+<a href="#universo">Universo</a>
 
 </nav>
 
@@ -53,29 +53,33 @@ Reservar
 
 <section id="inicio" class="hero">
 
-<div class="container hero-content">
+<img src="images/hero.jpg" class="hero-bg">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
 
 <h1>
 
-El sonido de tu proyecto merece ser
-<span>Profesional</span>
+Donde el sonido se convierte en  
+<span>identidad</span>
 
 </h1>
 
 <p>
 
-Producción musical, identidad artística y desarrollo creativo para artistas independientes.
+Producción musical, desarrollo artístico y creación sonora.
 
 </p>
 
 <div class="hero-buttons">
 
 <a href="#servicios" class="btn-main">
-Ver Servicios
+Explorar Servicios
 </a>
 
-<a href="https://youtube.com/@DORACHRECORDS" class="btn-secondary">
-Ver Videos
+<a href="#biblioteca" class="btn-secondary">
+Escuchar Música
 </a>
 
 </div>
@@ -85,40 +89,7 @@ Ver Videos
 </section>
 
 
-<section id="nosotros" class="section">
-
-<div class="container grid-2">
-
-<div>
-
-<h2>Sobre Dorach Records</h2>
-
-<p>
-
-Dorach Records es un estudio creativo enfocado en producción musical, identidad artística y desarrollo de proyectos sonoros independientes.
-
-</p>
-
-<p>
-
-Fundado por músicos para músicos, combinamos tecnología moderna con sensibilidad artística.
-
-</p>
-
-</div>
-
-<div>
-
-<img src="images/focaraque.png" class="img-card">
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="servicios" class="section dark">
+<section id="servicios" class="section">
 
 <div class="container">
 
@@ -132,7 +103,7 @@ Fundado por músicos para músicos, combinamos tecnología moderna con sensibili
 
 <h3>Producción Musical</h3>
 
-<p>Producción, arreglos y grabación.</p>
+<p>Producción, grabación y arreglos profesionales.</p>
 
 </div>
 
@@ -142,7 +113,7 @@ Fundado por músicos para músicos, combinamos tecnología moderna con sensibili
 
 <h3>Identidad Artística</h3>
 
-<p>Diseño conceptual y visual del proyecto.</p>
+<p>Concepto visual y musical para artistas.</p>
 
 </div>
 
@@ -152,7 +123,7 @@ Fundado por músicos para músicos, combinamos tecnología moderna con sensibili
 
 <h3>Asesoría</h3>
 
-<p>Estrategia para artistas independientes.</p>
+<p>Estrategia profesional para proyectos musicales.</p>
 
 </div>
 
@@ -160,9 +131,9 @@ Fundado por músicos para músicos, combinamos tecnología moderna con sensibili
 
 <i class="fas fa-network-wired"></i>
 
-<h3>Conexión Profesional</h3>
+<h3>Conexiones</h3>
 
-<p>Acceso a red de músicos y estudios.</p>
+<p>Red de músicos, estudios y espacios creativos.</p>
 
 </div>
 
@@ -173,11 +144,11 @@ Fundado por músicos para músicos, combinamos tecnología moderna con sensibili
 </section>
 
 
-<section id="proyectos" class="section">
+<section id="proyectos" class="section dark">
 
 <div class="container">
 
-<h2 class="center">Producciones</h2>
+<h2 class="center">Producciones Dorach</h2>
 
 <div class="grid-3">
 
@@ -204,35 +175,80 @@ Fundado por músicos para músicos, combinamos tecnología moderna con sensibili
 </section>
 
 
-<section id="biblioteca" class="section dark">
+<section id="biblioteca" class="section">
 
 <div class="container">
 
-<h2 class="center">Biblioteca Dorach</h2>
+<h2 class="center">Biblioteca Musical</h2>
+
+<div class="music-player">
+
+<div class="track" data-src="music/track1.mp3">
+
+<span>Focaraque — LoFi Session</span>
+
+<button class="play-btn">
+<i class="fas fa-play"></i>
+</button>
+
+</div>
+
+<div class="track" data-src="music/track2.mp3">
+
+<span>German Gutierres — Ballet</span>
+
+<button class="play-btn">
+<i class="fas fa-play"></i>
+</button>
+
+</div>
+
+</div>
+
+<audio id="audio"></audio>
+
+</div>
+
+</section>
+
+
+<section id="universo" class="section dark">
+
+<div class="container">
+
+<h2 class="center">Universo Dorach</h2>
 
 <p class="center">
 
-Música, procesos y universos sonoros.
+Dorach Records es un espacio creativo donde la música se convierte en identidad.
 
 </p>
 
-<div class="grid-3">
+<div class="grid-2">
 
-<a class="music-card" href="https://youtube.com">
-
-<img src="images/focaraque.png">
+<div class="universe-card">
 
 <h3>Focaraque</h3>
 
-</a>
+<p>
 
-<a class="music-card" href="https://youtube.com">
+Personaje musical que explora el sonido como lenguaje narrativo.
 
-<img src="images/german.jpg">
+</p>
 
-<h3>German Gutierres</h3>
+</div>
 
-</a>
+<div class="universe-card">
+
+<h3>Hemiola & Síncopa</h3>
+
+<p>
+
+Conceptos musicales convertidos en identidad artística.
+
+</p>
+
+</div>
 
 </div>
 
@@ -247,7 +263,7 @@ Música, procesos y universos sonoros.
 
 <h3>Dorach Records</h3>
 
-<p>Producción musical y desarrollo artístico.</p>
+<p>Producción musical independiente</p>
 
 <div class="social">
 
