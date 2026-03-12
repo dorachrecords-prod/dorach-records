@@ -238,3 +238,25 @@ font-size:36px;
 }
 
 }
+.fondo1{
+background:url("fondo1.jpg") center/cover no-repeat;
+}
+
+.fondo2{
+background:url("fondo2.jpg") center/cover no-repeat;
+}
+
+.fondo3{
+background:url("fondo3.jpg") center/cover no-repeat;
+}
+
+.fondo4{
+background:url("fondo4.jpg") center/cover no-repeat;
+}
+
+.section{
+padding:140px 0;
+background-size:cover;
+background-position:center;
+}
+
