@@ -1,17 +1,8 @@
-const audio = document.getElementById("audio")
+const menuBtn = document.querySelector(".menu-toggle")
+const navLinks = document.querySelector(".nav-links")
 
-const tracks = document.querySelectorAll(".track")
+menuBtn.addEventListener("click", () => {
 
-tracks.forEach(track => {
-
-track.querySelector(".play-btn").addEventListener("click", () => {
-
-const src = track.getAttribute("data-src")
-
-audio.src = src
-
-audio.play()
-
-})
+navLinks.classList.toggle("active")
 
 })
