@@ -1,8 +1,23 @@
-const menuBtn = document.querySelector(".menu-toggle")
-const navLinks = document.querySelector(".nav-links")
+const sections = document.querySelectorAll(".section");
 
-menuBtn.addEventListener("click", () => {
+const observer = new IntersectionObserver(entries => {
 
-navLinks.classList.toggle("active")
+entries.forEach(entry => {
 
-})
+if(entry.isIntersecting){
+
+entry.target.classList.add("visible");
+
+}
+
+});
+
+});
+
+sections.forEach(section => {
+
+section.classList.add("hidden");
+
+observer.observe(section);
+
+});
