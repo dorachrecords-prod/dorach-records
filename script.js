@@ -1,7 +1,17 @@
-window.addEventListener("scroll", function(){
+const audio = document.getElementById("audio")
 
-let header = document.querySelector(".header")
+const tracks = document.querySelectorAll(".track")
 
-header.classList.toggle("scrolled", window.scrollY > 50)
+tracks.forEach(track => {
+
+track.querySelector(".play-btn").addEventListener("click", () => {
+
+const src = track.getAttribute("data-src")
+
+audio.src = src
+
+audio.play()
+
+})
 
 })
