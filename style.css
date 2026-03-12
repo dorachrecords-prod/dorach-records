@@ -2,8 +2,6 @@
 
 --verde:#57A639;
 --violeta:#613D97;
---verde-claro:#AED078;
---violeta-oscuro:#512F87;
 
 }
 
@@ -17,6 +15,11 @@ font-family:Arial;
 body{
 background:#0a0f0a;
 color:white;
+}
+
+img{
+max-width:100%;
+display:block;
 }
 
 .container{
@@ -50,7 +53,7 @@ width:40px;
 }
 
 nav a{
-margin:0 15px;
+margin:0 10px;
 color:white;
 text-decoration:none;
 }
@@ -68,45 +71,25 @@ color:white;
 }
 
 .hero{
-height:100vh;
+height:90vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-position:relative;
-}
-
-.hero-bg{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.hero-overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-}
-
-.hero-content{
-position:relative;
-max-width:800px;
+background:linear-gradient(135deg,#0a0f0a,#0f0a0f);
 }
 
 .hero h1{
-font-size:65px;
+font-size:50px;
 }
 
 .hero span{
-background:linear-gradient(135deg,var(--verde),var(--violeta));
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+color:var(--verde);
 }
 
 .section{
-padding-top:120px;
+padding-top:140px;
+scroll-margin-top:120px;
 }
 
 .dark{
@@ -135,70 +118,26 @@ gap:30px;
 background:#1a1a1a;
 padding:30px;
 border-radius:10px;
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 25px rgba(87,166,57,0.3);
+text-align:center;
 }
 
 .card i{
-color:var(--verde);
 font-size:30px;
+color:var(--verde);
 margin-bottom:10px;
 }
 
 .project img{
-width:100%;
-border-radius:10px;
-}
-
-.music-player{
-margin-top:40px;
-}
-
-.track{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px;
-background:#1a1a1a;
-margin-bottom:10px;
-border-radius:10px;
-}
-
-.play-btn{
-background:var(--violeta);
-border:none;
-padding:10px;
-color:white;
-border-radius:50%;
-}
-
-.universe-card{
-background:#1a1a1a;
-padding:40px;
 border-radius:10px;
 }
 
 .center{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
 .footer{
 text-align:center;
-}
-
-.social a{
-margin:10px;
-font-size:22px;
-color:white;
-}
-
-.social a:hover{
-color:var(--verde);
 }
 
 .whatsapp{
@@ -213,4 +152,37 @@ align-items:center;
 justify-content:center;
 border-radius:50%;
 font-size:28px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.grid-4{
+grid-template-columns:1fr 1fr;
+}
+
+.grid-3{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media (max-width:600px){
+
+.grid-4,
+.grid-3,
+.grid-2{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+nav{
+display:none;
+}
+
 }
