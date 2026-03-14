@@ -5,339 +5,267 @@ box-sizing:border-box;
 }
 
 body{
-
 font-family:Arial, Helvetica, sans-serif;
 background:black;
 color:white;
-
 }
 
 /* LINKS */
-
 a{
-
 color:#7dff9a;
 text-decoration:none;
 transition:0.3s;
-
 }
 
 a:hover{
-
 color:#b48cff;
-
 }
 
 /* HEADER */
-
 header{
-
 background-image:url("fondo5.jpg");
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
+background-attachment:scroll;
 
 height:60px;
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
 padding:0 40px;
-
 position:sticky;
 top:0;
-
 }
 
 .logo{
-
 display:flex;
 align-items:center;
 gap:10px;
-
 }
 
 .logo img{
-
 height:35px;
-
 }
 
 nav a{
-
 margin-left:20px;
 font-size:14px;
-
 }
 
 /* HERO */
-
 .hero{
-
 background-image:url("fondo1.jpg");
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
+background-attachment:scroll;
 
-min-height:90vh;
-
+min-height:90svh; /* Usar 90svh en lugar de 90vh */
 display:flex;
 align-items:center;
 justify-content:center;
-
 text-align:center;
-
 position:relative;
-
 padding:120px 20px;
-
 }
 
 .overlay{
-
 position:absolute;
 top:0;
 left:0;
 right:0;
 bottom:0;
-
 background:rgba(0,0,0,0.6);
-
 }
 
 .hero-content{
-
 position:relative;
 z-index:2;
-
 max-width:900px;
-
 }
 
 .hero h1{
-
 font-size:52px;
-
 }
 
 .hero-text{
-
 font-size:18px;
 line-height:1.7;
-
 opacity:0.9;
-
 }
 
 /* SERVICES */
-
 .services-grid{
-
 margin-top:50px;
-
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
 gap:25px;
-
 }
 
 .service-card{
-
 background:rgba(0,0,0,0.45);
-
 padding:30px;
-
 border-radius:20px;
-
 transition:0.35s;
-
 backdrop-filter:blur(8px);
-
 }
 
 .service-card:hover{
-
 transform:translateY(-10px) scale(1.03);
-
 background:rgba(0,0,0,0.65);
-
 }
 
 /* SECTION */
-
 .section{
-
 padding:120px 20px;
-
 }
 
 .container{
-
 max-width:1100px;
 margin:auto;
-
 }
 
 /* ABOUT */
-
 .about{
-
 background-image:url("fondo2.jpg");
 background-size:cover;
-
+background-repeat:no-repeat;
+background-attachment:scroll;
 }
 
 .about-grid{
-
 display:grid;
 grid-template-columns:1fr 1fr;
-
 gap:50px;
-
 background:rgba(0,0,0,0.5);
-
 padding:40px;
-
 border-radius:20px;
-
 }
 
 .about img{
-
 width:100%;
 border-radius:15px;
-
 }
 
 .text-block{
-
 line-height:1.7;
-
 }
 
 /* ARTISTS */
-
 .artists{
-
 background-image:url("fondo4.jpg");
 background-size:cover;
-
+background-repeat:no-repeat;
+background-attachment:scroll;
 }
 
 .artist-grid{
-
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
 gap:30px;
-
 margin-top:40px;
-
 }
 
 .artist-card{
-
 background:rgba(0,0,0,0.45);
-
 padding:20px;
-
 border-radius:20px;
-
 text-align:center;
-
 transition:0.3s;
-
 }
 
 .artist-card:hover{
-
 transform:translateY(-8px) scale(1.03);
-
 background:rgba(0,0,0,0.65);
-
 }
 
 .artist-card img{
-
 width:100%;
-
 border-radius:12px;
-
 margin-bottom:10px;
-
 }
 
 /* DECORATIVE LINE */
-
 .line{
-
 width:60px;
 height:3px;
-
 background:linear-gradient(90deg,#57A639,#613D97);
-
 margin:20px 0 30px 0;
-
 }
 
 .hero-line{
-
 width:120px;
 height:4px;
-
 background:linear-gradient(90deg,#57A639,#613D97);
-
 margin:20px auto 30px auto;
-
 }
 
 /* FOOTER */
-
 footer{
-
 background-image:url("fondo5.jpg");
-
+background-size:cover;
+background-repeat:no-repeat;
+background-attachment:scroll;
 padding:30px;
-
 text-align:center;
-
 }
 
 /* ANIMATION */
-
 .hidden{
-
 opacity:0;
 transform:translateY(40px);
-
 transition:all 0.8s ease;
-
 }
 
 .visible{
-
 opacity:1;
 transform:translateY(0);
-
 }
 
 /* MOBILE */
-
 @media(max-width:800px){
-
 .about-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .hero h1{
-
 font-size:36px;
-
 }
 
+/* PROYECTOS */
+#proyectos{
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:scroll;
 }
 
+#proyectos h2{
+margin-bottom:4rem;
+}
+
+.cards{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.project-card img{
+width:100%;
+height:auto;
+max-height:300px; /* Limitar altura para evitar que se estiren */
+object-fit:cover;
+border-radius:4px;
+}
+
+.project-card h3{
+font-size:18px;
+}
+
+/* SECTION CONTAINER */
+.container{
+width:100%;
+padding:10px;
+}
+}
